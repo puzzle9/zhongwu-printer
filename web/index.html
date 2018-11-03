@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>热敏小票打印</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="http://www.zhongwu.co/images/logo/logo-zhongwu-black.png" alt="" width="272" height="72">
+        <h2>调用打印机</h2>
+        <p class="lead">中午打印机可以通过http接口调用,以下参数请去http://www.zhongwu.co获取</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">请填写如下表单</h4>
+            <form class="needs-validation" novalidate method="post" action="print.php">
+
+                <div class="mb-3">
+                    <label for="username">APPID</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="username" placeholder="请填写appid" name="appid" required>
+                        <div class="invalid-feedback" style="width: 100%;">
+                           请填写appid
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email">APPSECRET</label>
+                    <input type="email" class="form-control" id="email" placeholder="请填写appsecret" name="appsecret" required>
+                    <div class="invalid-feedback">
+                        请填写appsecret
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="address">打印机终端号</label>
+                    <input type="text" class="form-control" id="address" placeholder="请输入打印机终端号" required name="device_id">
+                    <div class="invalid-feedback">
+                        请输入打印机终端号
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="address2">打印机秘钥</label>
+                    <input type="text" class="form-control" id="address2" placeholder="请输入打印机秘钥" name="device_secret" required>
+                    <div class="invalid-feedback">
+                        请输入打印机秘钥
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="address2">打印内容</label>
+                    <textarea type="text" class="form-control" id="address2" placeholder="请输入打印内容" name="printdata" required></textarea>
+                    <div class="invalid-feedback">
+                        请输入打印内容
+                    </div>
+                </div>
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit">提交打印</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2017-2018 中午科技&中午打印机</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="http://www.zhongwu.co">技术支持</a></li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>
